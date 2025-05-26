@@ -16,7 +16,7 @@ export class Indices extends Document {
     open: number;
     @Prop({ required: true })
     previousClose: number;
-    
+
     @Prop({ required: true })
     dayHigh: number;
 
@@ -32,3 +32,5 @@ export class Indices extends Document {
 
 export const IndicesSchema = SchemaFactory.createForClass(Indices);
 export const INDICES_MODEL = Indices.name;
+
+IndicesSchema.index({ name: 1 }, { name: "INDEX_INDICE" })

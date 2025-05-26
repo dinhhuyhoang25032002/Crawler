@@ -35,7 +35,6 @@ export class IndicesGateway {
 
     async handleEmitData(data: any) {
         if ("name" in data) {
-
             this.server.emit(data.name, data);
         }
     }
